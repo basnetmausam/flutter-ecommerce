@@ -24,6 +24,7 @@ class MyThemes {
           bodyText1: TextStyle(
             fontSize: 20,
             fontFamily: GoogleFonts.poppins().fontFamily,
+            color: Colors.white,
           ),
         ),
 

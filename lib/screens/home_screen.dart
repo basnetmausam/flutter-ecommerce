@@ -1,6 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
+import '../models/category_model.dart';
 import '../widgets/appbar.dart';
+import '../widgets/carousal.dart';
 import '../widgets/navbar.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -8,11 +10,22 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppbar(
+    return Scaffold(
+      appBar: const CustomAppbar(
         title: 'Mero Shop',
       ),
-      bottomNavigationBar: NavBar(),
+      body: CarouselSlider(
+        options: CarouselOptions(
+          autoPlay: true,
+          aspectRatio: 2.0,
+          enlargeCenterPage: true,
+          enlargeStrategy: CenterPageEnlargeStrategy.height,
+        ),
+        items: Category.categories
+            .map((e) => HeroCarouselCard(category: e))
+            .toList(),
+      ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }
