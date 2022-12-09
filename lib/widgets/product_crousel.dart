@@ -4,8 +4,8 @@ import 'package:velocity_x/velocity_x.dart';
 import '../models/models.dart';
 import 'widgets.dart';
 
-class ProductCrousel extends StatelessWidget {
-  const ProductCrousel({
+class ProductCarousel extends StatelessWidget {
+  const ProductCarousel({
     Key? key,
     required this.height,
     required this.width,
@@ -27,6 +27,8 @@ class ProductCrousel extends StatelessWidget {
             width: width,
             height: height,
             product: Product.products[index],
+            widthFactor: 2.5,
+            isWishlist: false,
           ).px4();
         },
       ).px4().py4(),

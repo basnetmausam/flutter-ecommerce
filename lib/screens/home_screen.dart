@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 
@@ -32,7 +31,7 @@ class MyHomePage extends StatelessWidget {
           const SectionHeader(
             text: 'Recommended',
           ),
-          ProductCrousel(
+          ProductCarousel(
             height: height,
             width: width,
             product: Product.products
@@ -42,7 +41,7 @@ class MyHomePage extends StatelessWidget {
           const SectionHeader(
             text: 'Most Popular',
           ),
-          ProductCrousel(
+          ProductCarousel(
             height: height,
             width: width,
             product:

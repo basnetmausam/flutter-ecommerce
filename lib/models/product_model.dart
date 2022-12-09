@@ -17,7 +17,7 @@ class Product extends Equatable {
         "Casual Shoes 1",
         "Casual Shoes",
         "https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-        "this is a very good shoe ok",
+        "this is a very good shoe okthis is a very good shoe okthis is a very good shoe okthis is a very good shoe okthis is a very good shoe okthis is a very good shoe ok",
         true,
         false,
         100.00),
