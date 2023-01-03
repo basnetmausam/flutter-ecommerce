@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:mero_shop/models/product_model.dart';
+import 'models.dart';
 
 class WishList extends Equatable {
   final List<Product> wishList;

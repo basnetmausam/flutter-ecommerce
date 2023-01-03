@@ -2,8 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
-import '../../models/product_model.dart';
-import '../../models/wishlist_model.dart';
+import '../../models/models.dart';
 
 part 'wishlist_event.dart';
 part 'wishlist_state.dart';
@@ -52,14 +51,13 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
     RemoveProductFromWishlist event,
     Emitter<WishlistState> emit,
   ) {
-    if (this.state is WishlistLoaded) {
+    if (state is WishlistLoaded) {
       try {
         emit(
           WishlistLoaded(
             wishlist: WishList(
-              wishList:
-                  List.from((this.state as WishlistLoaded).wishlist.wishList)
-                    ..remove(event.product),
+              wishList: List.from((state as WishlistLoaded).wishlist.wishList)
+                ..remove(event.product),
             ),
           ),
         );

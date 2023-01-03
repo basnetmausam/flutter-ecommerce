@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mero_shop/widgets/widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../bloc/cart/cart_bloc.dart';
 import '../bloc/wishlist/wishlist_bloc.dart';
 import '../models/models.dart';
 
@@ -48,17 +49,23 @@ class ProductPage extends StatelessWidget {
                   );
                 },
               ),
-              ElevatedButton(
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.white)),
-                onPressed: () {
-                  debugPrint('Received click');
+              BlocBuilder<CartBloc, CartState>(
+                builder: (context, state) {
+                  return ElevatedButton(
+                    style: const ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.white)),
+                    onPressed: () {
+                      context.read<CartBloc>().add(CartProductAdded(product));
+                      Navigator.pushNamed(context, "/cart");
+                    },
+                    child: Text(
+                      'Add to cart',
+                      style: context.textTheme.bodyText1?.copyWith(
+                          fontWeight: FontWeight.bold, color: Colors.black),
+                    ),
+                  );
                 },
-                child: Text(
-                  'Add to cart',
-                  style: context.textTheme.bodyText1?.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.black),
-                ),
               ),
             ],
           ),
