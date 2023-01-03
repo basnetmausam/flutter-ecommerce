@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mero_shop/models/category_model.dart';
 import 'package:mero_shop/screens/home_screen.dart';
 import 'package:mero_shop/screens/profile_page.dart';
 import 'package:mero_shop/screens/wishlist_page.dart';

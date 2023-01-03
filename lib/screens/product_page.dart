@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mero_shop/widgets/widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../bloc/wishlist/wishlist_bloc.dart';
 import '../models/models.dart';
 
 class ProductPage extends StatelessWidget {
@@ -10,8 +12,8 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+    // final width = MediaQuery.of(context).size.width;
+    // final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: CustomAppbar(
         title: product.name,
@@ -27,9 +29,24 @@ class ProductPage extends StatelessWidget {
                 Icons.share,
                 size: 35,
               ),
-              const Icon(
-                Icons.favorite,
-                size: 35,
+              BlocBuilder<WishlistBloc, WishlistState>(
+                builder: (context, state) {
+                  return IconButton(
+                    icon: const Icon(
+                      Icons.favorite_outline,
+                      size: 35,
+                    ),
+                    onPressed: () {
+                      context
+                          .read<WishlistBloc>()
+                          .add(AddProductToWishlist(product));
+
+                      const snackbar = SnackBar(
+                          content: Text("Item added to your Wishlist! "));
+                      ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                    },
+                  );
+                },
               ),
               ElevatedButton(
                 style: const ButtonStyle(
