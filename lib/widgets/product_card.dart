@@ -84,6 +84,11 @@ class ProductCard extends StatelessWidget {
                             context
                                 .read<CartBloc>()
                                 .add(CartProductAdded(product));
+
+                            const snackbar = SnackBar(
+                                content: Text("Item added to your Cart! "));
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackbar);
                           },
                         );
                       } else {

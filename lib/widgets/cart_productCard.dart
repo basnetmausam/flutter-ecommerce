@@ -7,8 +7,10 @@ import '../models/product_model.dart';
 
 class CartProductCard extends StatelessWidget {
   final Product product;
+  final int quantity;
 
-  const CartProductCard({super.key, required this.product});
+  const CartProductCard(
+      {super.key, required this.product, required this.quantity});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,11 @@ class CartProductCard extends StatelessWidget {
                   color: Colors.black,
                   iconSize: 20,
                 ),
-                const Text("1"),
+                Text(
+                  "$quantity",
+                  style: context.textTheme.bodyLarge
+                      ?.copyWith(color: Colors.black),
+                ),
                 IconButton(
                   onPressed: () {
                     context.read<CartBloc>().add(CartProductAdded(product));

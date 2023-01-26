@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mero_shop/screens/home_screen.dart';
-import 'package:mero_shop/screens/profile_page.dart';
-import 'package:mero_shop/screens/wishlist_page.dart';
+import 'package:mero_shop/screens/profile_screen.dart';
+import 'package:mero_shop/screens/splash_screen.dart';
+import 'package:mero_shop/screens/wishlist_screen.dart';
 
 import '../models/models.dart';
-import '../screens/cart_page.dart';
-import '../screens/catalog_page.dart';
-import '../screens/product_page.dart';
+import '../screens/cart_screen.dart';
+import '../screens/catalog_screen.dart';
+import '../screens/product_screen.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
@@ -14,8 +15,9 @@ class AppRouter {
 
     switch (settings.name) {
       case '/':
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case '/home':
         return MaterialPageRoute(builder: (_) => const MyHomePage());
-
       case '/cart':
         return MaterialPageRoute(builder: (_) => const CartPage());
 

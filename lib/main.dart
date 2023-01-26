@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mero_shop/bloc/cart/cart_bloc.dart';
+import 'package:mero_shop/screens/screens.dart';
 import 'package:mero_shop/utils/app_router.dart';
 import 'package:mero_shop/utils/themes.dart';
 import 'bloc/wishlist/wishlist_bloc.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         darkTheme: MyThemes.darkTheme(context),
         themeMode: ThemeMode.system,
         onGenerateRoute: _appRouter.onGenerateRoute,
-        home: const MyHomePage(),
+        home: const SplashScreen(),
       ),
     );
   }

@@ -16,7 +16,7 @@ class NavBar extends StatelessWidget {
           children: [
             IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pushNamed(context, '/home');
                 },
                 icon: const Icon(
                   Icons.home,

@@ -60,7 +60,7 @@ class CartPage extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, '/home');
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
@@ -83,10 +83,20 @@ class CartPage extends StatelessWidget {
                     SizedBox(
                       height: 460,
                       child: ListView.builder(
-                        itemCount: state.cart.cartProducts.length,
+                        itemCount: state.cart
+                            .productQuantity(state.cart.cartProducts)
+                            .keys
+                            .length,
                         itemBuilder: (context, index) {
                           return CartProductCard(
-                            product: state.cart.cartProducts[index],
+                            quantity: state.cart
+                                .productQuantity(state.cart.cartProducts)
+                                .values
+                                .elementAt(index),
+                            product: state.cart
+                                .productQuantity(state.cart.cartProducts)
+                                .keys
+                                .elementAt(index),
                           );
                         },
                       ),
