@@ -14,10 +14,9 @@ ShoeMart is an e-commerce app built using Flutter and the BLoC state management 
 - State Management with BLoC: The app uses the BLoC (Business Logic Component) pattern for efficient and scalable state management, ensuring a smooth user experience.
 
 ## Screenshots
-
-![ShoeMart Screenshot 1](screenshots/screenshot1.png)
-![ShoeMart Screenshot 2](screenshots/screenshot2.png)
-![ShoeMart Screenshot 3](screenshots/screenshot3.png)
+![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-25 at 14 16 08](https://user-images.githubusercontent.com/74107418/234220930-b6cf18f0-2e03-4f4c-b92d-2177a8b8a407.png=300*500 )
+![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-25 at 14 17 04](https://user-images.githubusercontent.com/74107418/234220979-b48c1de9-1c5f-4a1b-9b94-4e51345c8809.png| width=100)
+![Simulator Screenshot - iPhone 14 Pro Max - 2023-04-25 at 14 16 38](https://user-images.githubusercontent.com/74107418/234220994-6813b570-7c1b-44fc-96c5-6e2b745d28f9.png| width=100)
 
 ## Technologies Used
 
