@@ -6,11 +6,11 @@ ShoeMart is an e-commerce app built using Flutter and the BLoC state management 
 
 - User-friendly interface: The app has an intuitive and visually appealing interface, making it easy for users to browse and purchase shoes.
 - Product Catalog: Users can browse through a wide range of shoes with detailed product information, including product name, price, brand, color, size, and description.
-- Search Functionality: Users can search for specific shoes based on product name, brand, or color using the search feature.
+- Search Functionality: Users can search for specific shoes based on product name, brand, or color using the search feature.(To be implemented)
 - Cart Functionality: Users can add shoes to their cart, view the items in their cart, update the quantity, and remove items from the cart.
 - Checkout Process: Users can go through the checkout process, including entering shipping information and making payment, to complete their purchase.
-- Order History: Users can view their order history to keep track of their past purchases.
-- Authentication and Authorization: The app has a login and registration system to authenticate users, and certain actions such as checkout require users to be logged in.
+- Order History: Users can view their order history to keep track of their past purchases.(To be implemented)
+- Authentication and Authorization: The app has a login and registration system to authenticate users, and certain actions such as checkout require users to be logged in.(To be implemented)
 - State Management with BLoC: The app uses the BLoC (Business Logic Component) pattern for efficient and scalable state management, ensuring a smooth user experience.
 
 ## Screenshots
